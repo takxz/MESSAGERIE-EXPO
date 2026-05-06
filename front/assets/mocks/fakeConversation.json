@@ -1,0 +1,108 @@
+{
+  "conversations": [
+    {
+      "id": 1,
+      "prenom": "Marie",
+      "nom": "Dupont",
+      "dernier_message": "D'accord, on se voit demain alors !",
+      "heure": "14:32",
+      "avatar_url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80"
+    },
+    {
+      "id": 2,
+      "prenom": "Thomas",
+      "nom": "Martin",
+      "dernier_message": "Super la réunion de ce matin",
+      "heure": "12:15",
+      "avatar_url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"
+    },
+    {
+      "id": 3,
+      "prenom": "Sophie",
+      "nom": "Bernard",
+      "dernier_message": "Tu as vu la dernière vidéo ?",
+      "heure": "Hier",
+      "avatar_url": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80"
+    },
+    {
+      "id": 4,
+      "prenom": "Lucas",
+      "nom": "Petit",
+      "dernier_message": "Message vocal (0:24)",
+      "heure": "Hier",
+      "avatar_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80"
+    },
+    {
+      "id": 5,
+      "prenom": "Emma",
+      "nom": "Leroy",
+      "dernier_message": "Merci pour ton aide !",
+      "heure": "Lun.",
+      "avatar_url": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80"
+    },
+    {
+      "id": 6,
+      "prenom": "Hugo",
+      "nom": "Moreau",
+      "dernier_message": "On se fait un tennis ce week-end ?",
+      "heure": "10:05",
+      "avatar_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"
+    },
+    {
+      "id": 7,
+      "prenom": "Léa",
+      "nom": "Roux",
+      "dernier_message": "Je t'envoie le compte-rendu d'ici une heure.",
+      "heure": "09:45",
+      "avatar_url": "https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&w=150&q=80"
+    },
+    {
+      "id": 8,
+      "prenom": "Nicolas",
+      "nom": "Girard",
+      "dernier_message": "C'est validé par le client ! 🎉",
+      "heure": "Hier",
+      "avatar_url": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=150&q=80"
+    },
+    {
+      "id": 9,
+      "prenom": "Chloé",
+      "nom": "Bonnet",
+      "dernier_message": "Tu as oublié tes clés au bureau.",
+      "heure": "Ven.",
+      "avatar_url": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80"
+    },
+    {
+      "id": 10,
+      "prenom": "Antoine",
+      "nom": "Gauthier",
+      "dernier_message": "Message vocal (0:12)",
+      "heure": "Mer.",
+      "avatar_url": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80"
+    },
+    {
+      "id": 11,
+      "prenom": "Manon",
+      "nom": "Faure",
+      "dernier_message": "C'est parti pour le projet !",
+      "heure": "22/04",
+      "avatar_url": "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=150&q=80"
+    },
+    {
+      "id": 12,
+      "prenom": "Julien",
+      "nom": "Lambert",
+      "dernier_message": "Je ne serai pas là demain matin.",
+      "heure": "Lun.",
+      "avatar_url": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=150&q=80"
+    },
+    {
+      "id": 13,
+      "prenom": "Sarah",
+      "nom": "Vidal",
+      "dernier_message": "Photo envoyée",
+      "heure": "Dim.",
+      "avatar_url": "https://images.unsplash.com/photo-1491349174775-aaafddd81942?auto=format&fit=crop&w=150&q=80"
+    }
+  ]
+}
