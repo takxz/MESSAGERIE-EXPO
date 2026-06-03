@@ -3,6 +3,8 @@ import * as Contacts from "expo-contacts";
 import { useEffect, useState } from "react";
 import {
   Image,
+  KeyboardAvoidingView,
+  Platform,
   Pressable,
   StyleSheet,
   Text,
@@ -23,7 +25,24 @@ import Message from "@/components/Message/Message";
 export default function Contact() {
   const [contact, setContact] = useState<Contacts.ExistingContact>();
   const { id } = useLocalSearchParams<{ id: string }>();
-  const [message, setMessage] = useState<string>("");
+  const [input, setInput] = useState<string>("");
+  const [message, setMessage] = useState<any[]>([
+    {
+      id: 1,
+      text: "Salut, comment ça va ?",
+      sender: "contact",
+    },
+    {
+        id: 2,
+        text: "Ça va bien, merci ! Et toi ?",
+        sender: "user",
+    },
+    {
+        id: 3,
+        text: "Ça va, je suis en train de travailler sur un projet.",
+        sender: "contact",
+    }
+  ]);
 
   const pictureColor = [
     "#f44336",
@@ -58,12 +77,24 @@ export default function Contact() {
   }, []);
 
   const sendMessage = () => {
+    if (input.trim() === "") return;
 
-    setMessage("");
+    const newMessage = {
+      id: message.length + 1,
+      text: input,
+      sender: "user",
+    };
+
+    setMessage([...message, newMessage]);
+    setInput("");
+
   }
     
   return (
-    <View style={styles.page}>
+    <KeyboardAvoidingView
+      style={styles.page}
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
+    >
       <View style={styles.headContent}>
         <View style={styles.header}>
           <View style={styles.userLeft}>
@@ -104,8 +135,11 @@ export default function Contact() {
         </View>
       </View>
       <View style={styles.messagesContainer}>
-        <Message message={message} color="#2184fc" />
-
+        {message.map((msg) => (
+          <Text key={msg.id} style={{...styles.message, backgroundColor: msg.sender === "user" ? "#006AFF" : "#fff", alignSelf: msg.sender === "user" ? "flex-end" : "flex-start", color: msg.sender === "user" ? "#fff" : "#4a4a4a"}}>
+            {msg.text}
+          </Text>
+        ))}
       </View>
       <View style={styles.messageInputContainer}>
         <Paperclip size={22} color="#8a8a8a" />
@@ -113,17 +147,17 @@ export default function Contact() {
           style={styles.messageInput}
           placeholder="Message..."
           placeholderTextColor="#8a8a8a"
-          value={message}
-          onChangeText={setMessage}
+          value={input}
+          onChangeText={setInput}
         />
-        {message.trim() === "" && <Mic size={22} color="#8a8a8a" />}
-        {message.trim() !== "" && (
+        {input.trim() === "" && <Mic size={22} color="#8a8a8a" />}
+        {input.trim() !== "" && (
             <Pressable onPress={sendMessage}>
               <Send size={22} color="#8a8a8a" />
             </Pressable>
           )}
       </View>
-    </View>
+    </KeyboardAvoidingView>
   );
 }
 
@@ -194,5 +228,15 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     fontSize: 15,
     color: "#4a4a4a",
+  },
+  message: {
+    padding: 10,
+    borderRadius: 10,
+    marginBottom: 10,
+    maxWidth: "80%",
+    alignSelf: "flex-start",
+    color: "#4a4a4a",
+    borderColor: "#d0d0d0",
+    borderWidth: 1,
   },
 });
