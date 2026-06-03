@@ -1,13 +1,21 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import {  Image, Pressable, StyleSheet, Text, View } from "react-native";
 
 export default function Conversation({conversation}: {conversation: any}) { 
+
+  const openConversationDetails = () => {
+    console.log("Ouvrir les détails de la conversation avec l'ID :", conversation.id);
+  }
+
+
   return (
     <View style={styles.conversationContainer}>
+      <Pressable onPress={openConversationDetails}>
         <Image
           source={{ uri: conversation.avatar_url }}
           style={styles.avatar}
         />
-    <View style={styles.conversationInfo}>
+      </Pressable>
+      <View style={styles.conversationInfo}>
       <Text style={styles.conversationName}>{conversation.prenom} {conversation.nom}</Text>
       <Text>{conversation.dernier_message}</Text>
     </View>
